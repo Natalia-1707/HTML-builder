@@ -4,5 +4,5 @@ let textPath = path.join(__dirname, 'text.txt');
 console.log(textPath);
 const readStream = fs.createReadStream(textPath);
 readStream.on('data', function(chunk) {
-    process.stdout.write(chunk);
+    console.log(chunk.toString());
 })
